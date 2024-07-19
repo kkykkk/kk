@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه محافظت‌شده</title>
+    <style>
+        #protectedContent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <label for="password">رمز عبور را وارد کنید:</label>
+        <input type="password" id="password" placeholder="رمز عبور">
+        <button onclick="checkPassword()">ورود</button>
+    </div>
+    
+    <div id="protectedContent">
+        <h1>خوش آمدید!</h1>
+        <img id="selectedImage" src="C:\Users\ModernSys\Downloads" alt="تصویر انتخاب شده">
+        <p id="customText">قابلمه 180 قیمت 24 هزار تومان است</p>
+    </div>
+
+    <script>
+        const PASSWORD = "1234"; // رمز عبور صحیح را اینجا تنظیم کنید
+        function checkPassword() {
+            let passwordInput = document.getElementById("password").value;
+            if (passwordInput === PASSWORD) {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("protectedContent").style.display = "block";
+            } else {
+                alert("رمز عبور نادرست است");
+            }
+        }
+    </script>
+</body>
+</html>
